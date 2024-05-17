@@ -98,3 +98,78 @@ FULL JOIN Cours ON Inscriptions.CoursID = Cours.CoursID;
 ## Conclusion
 
 Les jointures sont des outils puissants en SQL qui permettent de combiner des données de plusieurs tables pour répondre à des questions complexes. En comprenant comment utiliser les clés primaires et étrangères, ainsi que les différents types de jointures, vous pouvez manipuler et analyser efficacement les données dans une base de données relationnelle.
+
+
+# Exercices
+
+### Création des tables
+
+-- Table Etudiants
+```sql
+CREATE TABLE Etudiants (
+    EtudiantID INT PRIMARY KEY,
+    Nom VARCHAR(50)
+);
+```
+
+-- Table Cours
+```sql
+CREATE TABLE Cours (
+    CoursID INT PRIMARY KEY,
+    Intitule VARCHAR(50)
+);
+```
+
+-- Table Inscriptions
+```sql
+CREATE TABLE Inscriptions (
+    EtudiantID INT,
+    CoursID INT,
+    FOREIGN KEY (EtudiantID) REFERENCES Etudiants(EtudiantID),
+    FOREIGN KEY (CoursID) REFERENCES Cours(CoursID)
+);
+```
+
+
+### Insertion de Valeurs
+
+#### 1. Insertion dans la table `Etudiants`:
+```sql
+INSERT INTO Etudiants (EtudiantID, Nom) VALUES
+(1, 'Jean'),
+(2, 'Marie'),
+(3, 'Pierre'),
+(4, 'David'),
+(5, 'Eva');
+```
+
+#### 2. Insertion dans la table Cours:
+```sql
+INSERT INTO Cours (CoursID, Intitule) VALUES
+(101, 'Mathématiques'),
+(102, 'Français'),
+(103, 'Histoire'),
+(104, 'Chimie');
+```
+
+#### 3. Insertion dans la table Inscriptions;
+```sql
+INSERT INTO Inscriptions (EtudiantID, CoursID) VALUES
+(1, 101),
+(1, 102),
+(2, 102),
+(3, 101),
+(4, 103),
+(5, 104),
+(1, 102),
+(2, 101),
+(3, 103);
+```
+
+## Questions
+
+- Question 1: Listez tous les étudiants avec les cours auxquels ils sont inscrits.
+- Question 2: Trouvez les étudiants inscrits au cours de 'Mathématiques'.
+- Question 3: Affichez les cours auxquels 'Alice' est inscrite.
+- Question 4: Listez tous les étudiants et les cours, même ceux qui ne sont pas inscrits à un cours.
+- Question 5: Trouvez tous les cours qui n'ont pas d'étudiants inscrits.
