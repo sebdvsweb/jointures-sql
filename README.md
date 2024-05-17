@@ -173,3 +173,5 @@ INSERT INTO Inscriptions (EtudiantID, CoursID) VALUES
 - Question 3: Affichez les cours auxquels 'Alice' est inscrite.
 - Question 4: Listez tous les étudiants et les cours, même ceux qui ne sont pas inscrits à un cours.
 - Question 5: Trouvez tous les cours qui n'ont pas d'étudiants inscrits.
+- Question 6 : Trouver le nombre d'étudiants inscrits à chaque cours.
+- Question 7 : Afficher les cours auxquels est inscrit l'étudiant avec l'ID 2.
