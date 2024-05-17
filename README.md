@@ -1,4 +1,4 @@
-# Les Jointures en SQL pour Débutants
+# Les jointures de table en SQL
 
 ## Introduction
 
