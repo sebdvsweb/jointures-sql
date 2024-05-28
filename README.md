@@ -136,11 +136,12 @@ CREATE TABLE Inscriptions (
 #### 1. Insertion dans la table `Etudiants`:
 ```sql
 INSERT INTO Etudiants (EtudiantID, Nom) VALUES
-(1, 'Jean'),
+(1, 'Théo'),
 (2, 'Marie'),
-(3, 'Pierre'),
+(3, 'Abdel'),
 (4, 'David'),
-(5, 'Eva');
+(5, 'Alice'),
+(6, 'Thomas');
 ```
 
 #### 2. Insertion dans la table Cours:
@@ -149,7 +150,8 @@ INSERT INTO Cours (CoursID, Intitule) VALUES
 (101, 'Mathématiques'),
 (102, 'Français'),
 (103, 'Histoire'),
-(104, 'Chimie');
+(104, 'Chimie'),
+(105, 'Technologie');
 ```
 
 #### 3. Insertion dans la table Inscriptions;
