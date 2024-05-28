@@ -151,7 +151,8 @@ INSERT INTO Cours (CoursID, Intitule) VALUES
 (102, 'Français'),
 (103, 'Histoire'),
 (104, 'Chimie'),
-(105, 'Technologie');
+(105, 'Technologie'),
+(106, 'Sport');
 ```
 
 #### 3. Insertion dans la table Inscriptions;
